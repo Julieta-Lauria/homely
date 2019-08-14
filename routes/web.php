@@ -11,6 +11,10 @@
 |
 */
 
+Route::get('/', function(){
+	return view('index');
+});
+
 Route::get("/products", "ProductsController@index");
 Route::get("/products/create", "ProductsController@create");
 Route::post("/products/store", "ProductsController@store");

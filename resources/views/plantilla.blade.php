@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/app.css">
     <title>@yield("titulo")</title>
+    <link rel="icon" href="/favicon.png" type="image/ico" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/ico" />
   </head>
   <body>
   <div class="banner_negro">
@@ -86,7 +88,7 @@
         </fieldset>
       </form></li> <!--@@ a modo de prueba, despues se cambian por íconos -->
      <li id="menu_hamburguesa"><a href="#"><i class="fas fa-bars"></i></i></a></li>
-     <li><a href="login.php"><i class="fas fa-sign-in-alt"></i></a></li>
+     <li><a href="{{ url('/login') }}"><i class="fas fa-sign-in-alt"></i></a></li>
      <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
    </nav>
@@ -113,7 +115,7 @@
       <div class="link-list">
         <h5>AYUDA</h5>
         <ul class="links">
-          <li><a href="faq.html">Preguntas</a></li>
+          <li><a href="{{ url('/faq') }}">Preguntas</a></li>
           <li><a href="#">Devoluciones</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
@@ -121,8 +123,8 @@
       <div class="link-list">
         <h5>CUENTA</h5>
         <ul class="links">
-          <li><a href="login.html">Ingresar</a></li>
-          <li><a href="register.html">Registro</a></li>
+          <li><a href="{{ url('/login') }}">Ingresar</a></li>
+          <li><a href="{{ url('/register') }}">Registro</a></li>
           <li><a href="#">Ordenes</a></li>
         </ul>
       </div>
