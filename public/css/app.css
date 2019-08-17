@@ -663,10 +663,14 @@ footer p{
 }
 
 /* Estilo para resaltar errores de logueo o registracion de usuarios */
+/* Se agrega clase laravel invalid-feed para que figure en rojo tmb */
 
 .form-error-validate {
   color: red !important;
-  font-size: 0.8em;
+/*  font-size: 0.8em;*/
+}
+span.invalid-feedback strong {
+  color: red !important;
 }
 
 /* Estilo que resalta en rojo el borde del campo del formulario que tenga error */
