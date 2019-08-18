@@ -5,12 +5,18 @@
 @endsection
 
 @section("principal")
-  <h1>Mis productos</h1>
-  <ul>
-    @foreach ($products as $product)
-    <li>
-      <p>{{$product->name}}</p>
-    </li>
-    @endforeach
-  </ul>
+<div class="products-container">
+  <h2>Listado de productos</h2>
+  <p>- Ingresar en cada producto para ver sus detalles -</p>
+  <hr>
+    <ul>
+      @foreach ($products as $product)
+      <li>
+        <a href="/products/{{$product->id}}">{{$product->name}}</a>
+        <hr>
+      </li>
+      @endforeach
+    </ul>
+  </div>
+
 @endsection
