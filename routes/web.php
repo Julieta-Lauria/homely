@@ -16,12 +16,12 @@ Route::get('/', function(){
 });
 
 Route::get("/products", "ProductsController@index");
-Route::get("/products/create", "ProductsController@create");
-Route::post("/products/store", "ProductsController@store");
-Route::get('/products/edit/{id}', 'ProductsController@edit');
+Route::get("/products/create", "ProductsController@create")->middleware('auth');
+Route::post("/products/store", "ProductsController@store")->middleware('auth');
+Route::get('/products/edit/{id}', 'ProductsController@edit')->middleware('auth');
 Route::put('/products/{id}', 'ProductsController@update');
 Route::get('/products/{id}', 'ProductsController@show');
-Route::delete('/products/{id}', 'ProductsController@destroy');
+Route::delete('/products/{id}', 'ProductsController@destroy')->middleware('admin');
 
 Route::get("/index", function(){
   return view("index");
@@ -31,7 +31,8 @@ Route::get("/faq", function(){
   return view("faq");
 });
 
-Route::get("/login", "UsuarioController@login");
+//El loguin va por Auth de laravel
+//Route::get("/login", "UsuarioController@login");
 
 Route::get("/logout", function(){
   return view("logout");
@@ -44,7 +45,6 @@ Route::get("/profile", function(){
 Route::get("/register", function(){
   return view("profile");
 });
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');

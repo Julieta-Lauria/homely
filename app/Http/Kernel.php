@@ -11,6 +11,9 @@ class Kernel extends HttpKernel
      *
      * These middleware are run during every request to your application.
      *
+     * SE AGREGA EL VERIFYUSERSMW MIDDLEWARE EN TODAS LAS PAFGINAS DEL site
+     * CREO QUE EN TODAS NECESITAMOS SABER SI ESTÁ LOGUEADO. SI NO MASARLO A $routeMiddleware
+     *
      * @var array
      */
     protected $middleware = [
@@ -60,6 +63,8 @@ class Kernel extends HttpKernel
         'signed' => \Illuminate\Routing\Middleware\ValidateSignature::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
+        'admin' => \App\Http\Middleware\VerifyUsersMW::class,
+
     ];
 
     /**

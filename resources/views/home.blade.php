@@ -1,6 +1,10 @@
-@extends('layouts.app')
+@extends("plantilla")
 
-@section('content')
+@section("titulo")
+  Registrese
+@endsection
+
+@section("principal")
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
@@ -13,8 +17,23 @@
                             {{ session('status') }}
                         </div>
                     @endif
+                      You are logged in!
+                      <p><b>Nombre: </b>{{ $dataUser->name }}</p>
+                      <p><b>Apellido:</b> {{ $dataUser->last_name }}</p>
+                      <p><b>Email:</b> {{ $dataUser->email }}</p>
+                      <img src="/storage/{{ $dataUser->avatar }}" width="150">
 
-                    You are logged in!
+                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                <a class="dropdown-item" href="{{ route('logout') }}"
+                                   onclick="event.preventDefault();
+                                                 document.getElementById('logout-form').submit();">
+                                    {{ __('Logout') }}
+                                </a>
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                    @csrf
+                                </form>
+                            </div>
                 </div>
             </div>
         </div>
