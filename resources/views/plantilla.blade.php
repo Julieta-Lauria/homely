@@ -18,7 +18,7 @@
   </div>
   <header> <!-- Header segundo avance -->
    <div class="nav">
-    <a href="index.html"><h1 style="font-size:50px;">/Homely\</h1></a>
+    <a href="{{ url('/index') }}"><h1 style="font-size:50px;">/Homely\</h1></a>
     <nav id="categorias">
      <ul>
       <li><a href="#">Living</a>
@@ -116,7 +116,7 @@
         <h5>AYUDA</h5>
         <ul class="links">
           <li><a href="{{ url('/faq') }}">Preguntas</a></li>
-          <li><a href="#">Devoluciones</a></li>
+          <li><a href="{{ url('/products')}}">Productos</a></li>
           <li><a href="#">Contacto</a></li>
         </ul>
       </div>
