@@ -106,7 +106,7 @@
 
                             <div>
                                 <select id="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country">
-                                <option value="arg">Argentina</option>
+                                <!-- <option value="arg">Argentina</option> -->
                                   </select>
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">
@@ -157,4 +157,7 @@
         </div>
     </div>
 </div>
+<script type="text/javascript" src="js/main.js">
+
+</script>
 @endsection

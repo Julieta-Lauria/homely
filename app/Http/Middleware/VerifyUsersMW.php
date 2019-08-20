@@ -19,9 +19,11 @@ class VerifyUsersMW
       if($user != null){
           if ($user->email == 'admin@admin') {
             return $next($request);
+          } else{
+            return redirect('login')->with('error','Necesitas ser administrador');
           }
+
         }
-      return redirect('login')->with('error','Necesitas ser administrador');
 
     }
 }
