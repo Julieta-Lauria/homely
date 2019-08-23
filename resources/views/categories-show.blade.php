@@ -1,14 +1,14 @@
 @extends("plantilla")
 
 @section("titulo")
-  {{$productDetail->name}}
+  {{$productDetail->categories[0]->name}}
 @endsection
 
 @section("principal")
 <div class="prod-container">
   <img src="/storage/{{ $productDetail->photo }}" class="product-photo">
   <div class="product-details">
-    {{dd($productDetail->categories[0]->products)}}
+    {{dd($productDetail->categories[0]->name)}}
     <h2>{{ $productDetail->name }}</h2>
     <hr>
     <p class=prod-price>${{ $productDetail->price }}</p>

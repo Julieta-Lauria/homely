@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 
 use App\Product;
 use App\Color;
+use App\Category;
 
 class ProductsController extends Controller
 {
@@ -31,7 +32,10 @@ class ProductsController extends Controller
     public function create()
     {
       $colors = Color::orderBy('name')->get();
-      return view('products-create-form', compact('colors'));
+      $categories = Category::orderBy('name')->get();
+      return view('products-create-form', compact('colors','categories'));
+
+
     }
 
     /**
@@ -47,6 +51,7 @@ class ProductsController extends Controller
         'name' => "required|string|unique:products,name",
         'price' => "required|numeric",
         'color_id' => "required",
+        'category_id' => "required",
         'dimension' => 'required | string',
         'description' => 'required | string',
         'photo' => 'required | image'
@@ -55,6 +60,7 @@ class ProductsController extends Controller
         'name.unique' => 'El nombre ya se encuentra en la base de datos',
         'price.required' => 'Es obligatorio ingresar el precio',
         'color_id.required' => 'Es obligatorio elegir un color',
+        'category_id.required' => 'Es obligatorio elegir una categoria',
         'price.numeric' => 'El precio debe contener solo números',
         'dimension.required' => 'Es obligatorio ingresar las medidas',
         'description.required' => 'Es obligatorio ingresar la descripción',
@@ -70,12 +76,13 @@ class ProductsController extends Controller
       $newProduct->photo = $nombreArchivo;
       //
       $newProduct->color_id = $request['color_id'];
-      $newProduct->name = $request['name'];
       $newProduct->price = $request['price'];
+      $newProduct->name = $request['name'];
       $newProduct->dimension = $request['dimension'];
       $newProduct->description = $request['description'];
 
 			$newProduct->save();
+      $newProduct->categories()->sync([$request['category_id']]);
 
       // Vamos a retornar una redirección a un RUTA
       return redirect('/products');
@@ -106,7 +113,8 @@ class ProductsController extends Controller
     {
       $productToEdit = Product::find($id);
       $colors = Color::orderBy('name')->get();
-      return view('products-edit-form', compact('productToEdit', 'colors'));
+      $categories = Category::orderBy('name')->get();
+      return view('products-edit-form', compact('productToEdit', 'colors','categories'));
     }
 
     /**
@@ -124,6 +132,7 @@ class ProductsController extends Controller
         'name' => "required|string",
         'price' => "required|numeric",
         'color_id' => "required",
+        'category_id' => "required",
         'dimension' => 'required | string',
         'description' => 'required | string',
         'photo' => 'required | image'
@@ -131,6 +140,7 @@ class ProductsController extends Controller
         'name.required' => 'Es obligatorio ingresar el nombre',
         'price.required' => 'Es obligatorio ingresar el precio',
         'color_id.required' => 'Es obligatorio elegir un color',
+        'category_id.required' => 'Es obligatorio elegir una categoria',
         'price.numeric' => 'El precio debe contener solo números',
         'dimension.required' => 'Es obligatorio ingresar las medidas',
         'description.required' => 'Es obligatorio ingresar la descripción',
@@ -142,6 +152,7 @@ class ProductsController extends Controller
       $productToUpdate->name = $request->input('name');
       $productToUpdate->price = $request->input('price');
       $productToUpdate->color_id = $request->input('color_id');
+      $productToUpdate->category_id = $request->input('category_id');
       $productToUpdate->dimension = $request->input('dimension');
       $productToUpdate->description = $request->input('description');
 
@@ -166,4 +177,6 @@ class ProductsController extends Controller
       $productToDelete->delete();
       return redirect('/products');
     }
+
+
 }

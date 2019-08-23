@@ -16,12 +16,13 @@ Route::get('/', function(){
 });
 
 Route::get("/products", "ProductsController@index");
-Route::get("/products/create", "ProductsController@create")->middleware('auth');
-Route::post("/products/store", "ProductsController@store")->middleware('auth');
+Route::get("/products/create", "ProductsController@create");
+Route::post("/products/store", "ProductsController@store");
 Route::get('/products/edit/{id}', 'ProductsController@edit')->middleware('auth');
 Route::put('/products/{id}', 'ProductsController@update');
 Route::get('/products/{id}', 'ProductsController@show');
-Route::delete('/products/{id}', 'ProductsController@destroy')->middleware('admin');
+
+Route::delete('/products/{id}', 'ProductsController@destroy');
 
 Route::get("/index", function(){
   return view("index");
@@ -46,5 +47,14 @@ Route::get("/register", function(){
   return view("profile");
 });
 Auth::routes();
+
+Route::get("/categoria", function(){
+  return view("categoria");
+});
+
+Route::get("/carrito", function(){
+  return view("carrito");
+});
+
 
 Route::get('/home', 'HomeController@index')->name('home');
