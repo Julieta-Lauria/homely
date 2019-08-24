@@ -17,7 +17,7 @@
 
       <div class="separador-container"><!-- Container de barra y txt TRENDING 1 -->
         <div class="texto-barra-separadora">
-        <span> # Destacados </span>
+        <span>  Destacados </span>
         </div><!-- /Div de txt de la barra separadora -->
         <hr class="barra-separadora">
         </hr><!-- / Barra separadora -->
@@ -27,7 +27,6 @@
         <a href="#" class="a-lista-destacado-img"> <!--Link articulo destacado -->
         <img src="img/cat1.jpg" alt="" class="img-articulo-destacado1">
         </a><!--/Link articulo destacado -->
-
         <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
           <img src="img/articulo-destacado2.jpg" alt="" class="img-articulo-destacado2">
         </a><!--/Articulos destacados lista de imagenes -->
@@ -45,7 +44,7 @@
 
       <div class="separador-container"><!-- Container de BARRA sola -->
         <div class="texto-barra-separadora">
-          <span> # Categorias </span>
+          <span>  Categorias </span>
         </div><!-- /Div de txt de la barra separadora -->
         <hr class="barra-separadora">
         </hr><!-- / Barra separadora -->
@@ -99,6 +98,9 @@
         <img src="imgs/insta-4.jpg" alt="" class="instagram-4">
       </div>
   </section>
+  <script type="text/javascript" src="js/main.js">
+
+  </script>
 @endsection("principal")
 
 </body>

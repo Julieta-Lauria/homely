@@ -52,5 +52,5 @@
 
   </div>
 </section>
-<hr>
+
 @endsection("principal")

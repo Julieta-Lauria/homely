@@ -102,7 +102,7 @@
 
 
                         <div class="field-group">
-                            <label for="country">{{ __('Pais de nacimiento') }}</label>
+                            <label for="country">{{ __('Pais') }}</label>
 
                             <div>
                                 <select id="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country">
@@ -116,8 +116,9 @@
                             </div>
                         </div>
 
+
                         <div class="field-group">
-                            <label for="password">{{ __('Constraseña') }}</label>
+                            <label for="password">{{ __('Contraseña') }}</label>
 
                             <div>
                                 <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="new-password">

@@ -32,6 +32,14 @@ Route::get("/faq", function(){
   return view("faq");
 });
 
+Route::get("/politica", function(){
+  return view("politica");
+});
+
+Route::get("/locations", function(){
+  return view("locations");
+});
+
 //El loguin va por Auth de laravel
 //Route::get("/login", "UsuarioController@login");
 

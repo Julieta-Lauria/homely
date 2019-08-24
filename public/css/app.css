@@ -244,10 +244,10 @@ section .separador-container .texto-barra-separadora span{
 } /*//.texto-barra-separadora DIV */
 
 section .separador-container .barra-separadora{
-  border: none;
-  border-top: solid 1px black;
-  border-bottom: solid 1px black;
-  max-width: 90%;
+  /* border: none;
+  border-top: solid 1px black; */
+  /* border-bottom: solid 1px black; */
+  max-width: 95%;
   margin: 30px auto;
   border-radius: 5px;
 }/*//.barra-separadora DIV */
@@ -357,7 +357,7 @@ section .buscador{
 }
 section .container hr{
   background-color: black;
-  width: 80%;
+  width: 95%;
 }
 
 section .tabs { /* --- Contenedor de las tabs ----- */
@@ -440,6 +440,7 @@ section .pestana:checked + .label + .panel {
 .instagram-feed{
   width:90%;
   margin: auto;
+  margin-bottom: 10%;
 }
 
 .instagram-2,
@@ -573,12 +574,62 @@ footer p{
   margin: auto;
 }
 
+.policy-container{
+  width:80%;
+  margin: auto;
+  margin-top:5%;
+  margin-bottom: 10%;
+}
+
+.policy-container p{
+  line-height: 1.5;
+}
+
+.location-container{
+  width:90%;
+  margin:auto;
+  display: flex;
+  margin-bottom:10%;
+}
+
+.map-container{
+  width:45%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.map{
+  width:100%;
+}
+
+.location-details{
+  background-color: #efefef;
+  width:100%;
+  margin-top:5%;
+  margin-bottom:5%;
+}
+
+
 .form-container h2,
-.products-container h2{
+.products-container h2,
+.lora-h2{
   font-family:'Lora', serif;
   font-size:2.5em;
   text-align: center;
   font-weight:400;
+}
+
+.location{
+  padding-left: 5%;
+}
+
+.location-details h2{
+  font-family:'Lora', serif;
+  font-size:1.8em;
+  text-align: left;
+  font-weight:400;
+  margin-top: 5%;
 }
 
 .prod-container h2{
@@ -643,6 +694,7 @@ footer p{
 .products-container{
   width:40%;
   margin:auto;
+  margin-bottom:10%;
 }
 
 .products-container li{
@@ -827,7 +879,7 @@ input.error {
 
   .footer-container{
     width:90%;
-    margin: 10% auto 0%;
+    margin: 5% auto 0%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -1486,7 +1538,7 @@ section .container-articulo-img{
     text-align: center;
 }
 
-img {border-radius: 10px;}
+/* img {border-radius: 10px;} */
 
 
 /* CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - CARRITO - */

@@ -1,4 +1,4 @@
-
+// Select de paises
 var selectPaises = document.querySelector('#country');
 
 fetch('https://restcountries.eu/rest/v2/all')
@@ -16,3 +16,5 @@ fetch('https://restcountries.eu/rest/v2/all')
   .catch(function(error){
     console.log(error)
   })
+
+  

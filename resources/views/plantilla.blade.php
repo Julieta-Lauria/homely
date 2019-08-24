@@ -21,7 +21,7 @@
     <a href="{{ url('/index') }}"><h1 style="font-size:50px;">/Homely\</h1></a>
     <nav id="categorias">
      <ul>
-      <li><a href="#">Living</a>
+      <li><a href="#">Sillas</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -40,7 +40,7 @@
           </ul>
         </ul>
       </li>
-      <li><a href="#">Comedor</a>
+      <li><a href="#">Sillones</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -53,7 +53,7 @@
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
         </ul></li>
-      <li><a href="#">Dormitorio</a>
+      <li><a href="#">Mesas</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -66,7 +66,7 @@
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
         </ul></li>
-      <li><a href="#">Oficina</a>
+      <li><a href="#">Escritorios</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -98,6 +98,7 @@
     @yield("principal")
   </section>
   <footer class="footer">
+<hr>
     <div class="footer-container">
       <div class="footer-newsletter">
         <h3>Suscribite</h3>
@@ -117,7 +118,7 @@
         <ul class="links">
           <li><a href="{{ url('/faq') }}">Preguntas</a></li>
           <li><a href="{{ url('/products')}}">Productos</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="{{ url('/locations')}}">Sucursales</a></li>
         </ul>
       </div>
       <div class="link-list">
@@ -133,16 +134,16 @@
         <ul class="links">
           <li><a href="#">Nosotros</a></li>
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Política</a></li>
+          <li><a href="{{ url('/politica') }}">Política</a></li>
         </ul>
       </div>
     </div>
     </div>
     <div class="social-media">
-      <a href="#"><img src="imgs/facebook-logo-button.svg" width="30px" height="30px" alt=""></a>
-      <a href="#"><img src="imgs/twitter-logo-button.svg" width="30px" height="30px" alt=""></a>
-      <a href="#"><img src="imgs/instagram-logo.svg" width="30px" height="30px" alt=""></a>
-      <a href="#"><img src="imgs/pinterest-logo.svg" width="30px" height="30px" alt=""></a>
+      <a href="https://www.facebook.com/campaign/landing.php?&campaign_id=1653388260&extra_1=s%7Cc%7C318309252364%7Ce%7Cfacebook%7C&placement=&creative=318309252364&keyword=facebook&partner_id=googlesem&extra_2=campaignid%3D1653388260%26adgroupid%3D61874672325%26matchtype%3De%26network%3Dg%26source%3Dnotmobile%26search_or_content%3Ds%26device%3Dc%26devicemodel%3D%26adposition%3D1t1%26target%3D%26targetid%3Dkwd-541132862%26loc_physical_ms%3D1000073%26loc_interest_ms%3D%26feeditemid%3D%26param1%3D%26param2%3D&gclid=EAIaIQobChMIvI-jos6b5AIVhoaRCh3ljAvyEAAYASAAEgJmtvD_BwE" target="_blank"><img src="imgs/facebook-logo-button.svg" width="30px" height="30px" alt=""></a>
+      <a href="https://twitter.com/Twitter?ref_src=twsrc%5Egoogle%7Ctwcamp%5Eserp%7Ctwgr%5Eauthor" target="_blank" ><img src="imgs/twitter-logo-button.svg" width="30px" height="30px" alt=""></a>
+      <a href="https://www.instagram.com/" target="_blank"><img src="imgs/instagram-logo.svg" width="30px" height="30px" alt=""></a>
+      <a href="https://www.pinterest.cl/" target="_blank"><img src="imgs/pinterest-logo.svg" width="30px" height="30px" alt=""></a>
   </div>
   <hr>
   <p>© 2019, Homely.<br> Todos los derechos reservados.</p>
