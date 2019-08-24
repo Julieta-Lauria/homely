@@ -1,7 +1,7 @@
 @extends("plantilla")
 
 @section("titulo")
-  Preguntas
+  Carrito
 @endsection
 
 @section("principal")

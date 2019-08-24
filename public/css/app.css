@@ -654,6 +654,10 @@ footer p{
   list-style-type:disc;
 }
 
+.edit-product{
+  margin-bottom: 10%;
+}
+
 .edit-delete-product{
   display: flex;
   flex-direction: column;

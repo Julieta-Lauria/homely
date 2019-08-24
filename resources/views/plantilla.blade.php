@@ -10,7 +10,7 @@
   </head>
   <body>
   <div class="banner_negro">
-    <p>Envios y devoluciones gratuitas para todos los pedidos!</p>
+    <p>¡Envíos y devoluciones gratuitas para todos los pedidos!</p>
     <ul>
       <a href="#"><li>ACERCA</li></a>
       <a href="#"><li>LLAMANOS (011) 5310-1450</li></a>
@@ -89,7 +89,7 @@
       </form></li> <!--@@ a modo de prueba, despues se cambian por íconos -->
      <li id="menu_hamburguesa"><a href="#"><i class="fas fa-bars"></i></i></a></li>
      <li><a href="{{ url('/login') }}"><i class="fas fa-sign-in-alt"></i></a></li>
-     <li><a href="#"><i class="fas fa-shopping-cart"></i></a></li>
+     <li><a href="{{ url('/carrito') }}"><i class="fas fa-shopping-cart"></i></a></li>
     </ul>
    </nav>
    </div>

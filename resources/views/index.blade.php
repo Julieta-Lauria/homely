@@ -24,21 +24,31 @@
       </div><!-- /Container de barra y txt TRENDING 1 -->
 
       <article class="container-articulo-img"> <!-- Container del primer articulo solo imagen -->
-        <a href="#" class="a-lista-destacado-img"> <!--Link articulo destacado -->
-        <img src="img/cat1.jpg" alt="" class="img-articulo-destacado1">
-        </a><!--/Link articulo destacado -->
-        <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
-          <img src="img/articulo-destacado2.jpg" alt="" class="img-articulo-destacado2">
-        </a><!--/Articulos destacados lista de imagenes -->
-        <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
-          <img src="img/articulo-destacado3.jpg" alt="" class="img-articulo-destacado3">
-        </a><!--/Articulos destacados lista de imagenes -->
-        <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
-          <img src="img/articulo-destacado4.jpg" alt="" class="img-articulo-destacado4">
-        </a><!--/Articulos destacados lista de imagenes -->
-        <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
-          <img src="img/articulo-destacado5.jpg" alt="" class="img-articulo-destacado5">
-        </a><!--/Articulos destacados lista de imagenes -->
+        <div class="mySlides">
+          <a href="#" class="a-lista-destacado-img"> <!--Link articulo destacado -->
+          <img src="img/cat1.jpg" alt="" class="img-articulo-destacado1">
+          </a><!--/Link articulo destacado -->
+        </div>
+        <div class="mySlides">
+          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+            <img src="img/articulo-destacado2.jpg" alt="" class="img-articulo-destacado2">
+          </a><!--/Articulos destacados lista de imagenes -->
+        </div>
+        <div class="mySlides">
+          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+            <img src="img/articulo-destacado3.jpg" alt="" class="img-articulo-destacado3">
+          </a><!--/Articulos destacados lista de imagenes -->
+        </div>
+        <div class="mySlides">
+          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+            <img src="img/articulo-destacado4.jpg" alt="" class="img-articulo-destacado4">
+          </a><!--/Articulos destacados lista de imagenes -->
+        </div>
+        <div class="mySlides">
+          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+            <img src="img/articulo-destacado5.jpg" alt="" class="img-articulo-destacado5">
+          </a><!--/Articulos destacados lista de imagenes -->
+        </div>
       </article><!-- /Container del primer articulo solo imagen container-articulo-img -->
 
 
