@@ -1,38 +1,24 @@
 @extends("plantilla")
 
 @section("titulo")
-  {{$productDetail->categories[0]->name}}
+ Productos Categoria
 @endsection
 
 @section("principal")
-<div class="prod-container">
-  <img src="/storage/{{ $productDetail->photo }}" class="product-photo">
-  <div class="product-details">
-    {{dd($productDetail->categories[0]->name)}}
-    <h2>{{ $productDetail->name }}</h2>
-    <hr>
-    <p class=prod-price>${{ $productDetail->price }}</p>
-    <div class="prod-features">
-      <ul>
-        <li><p><span>Color:</span> {{ $productDetail->color ? $productDetail->color->name : 'Sin color especificado' }}</p></li>
-        <li><p><span>Medidas: </span> {{ $productDetail->dimension }}</p></li>
-        <li><p><span>Descripción: </span> {{ $productDetail->description }}</p></li>
-      </ul>
-    </div>
-<div class="edit-delete-product">
-  <form action="/products/{{ $productDetail->id }}" method="post">
-    @csrf
-    <!-- Decimos que aunque en el formulario tengamos metodo post, vamos a usar delete: -->
-    {{ method_field('delete') }}
-    <div class="delete-button">
-      <button type="submit" name="send">Borrar producto</button>
-    </div>
-  </form>
-    <a href="/products/edit/{{ $productDetail->id }}" class="edit-product">Editar producto</a>
-</div>
+<div class="products-container">
+  <h2>Listado de productos</h2>
+  <p>- Ingresar en cada producto para ver sus detalles -</p>
+  <hr>
+    <ul>
+      @foreach ($productsCategory->products as $product)
+      <li>
 
+        <a href="/products/{{$product->id}}">{{$product->name}}</a>
+        <hr>
+      </li>
+      @endforeach
+      
+    </ul>
   </div>
-
-</div>
 
 @endsection

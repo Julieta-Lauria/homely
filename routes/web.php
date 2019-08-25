@@ -24,6 +24,7 @@ Route::get('/products/{id}', 'ProductsController@show');
 Route::delete('/products/{id}', 'ProductsController@destroy');
 
 Route::get('/categorias', 'CategoriesController@index');
+Route::get('/categorias/{name}', 'CategoriesController@showCategories');
 
 Route::get("/index", function(){
   return view("index");
