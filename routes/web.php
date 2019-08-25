@@ -21,8 +21,9 @@ Route::post("/products/store", "ProductsController@store");
 Route::get('/products/edit/{id}', 'ProductsController@edit')->middleware('auth');
 Route::put('/products/{id}', 'ProductsController@update');
 Route::get('/products/{id}', 'ProductsController@show');
-
 Route::delete('/products/{id}', 'ProductsController@destroy');
+
+Route::get('/categorias', 'CategoriesController@index');
 
 Route::get("/index", function(){
   return view("index");
