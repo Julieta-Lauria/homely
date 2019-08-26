@@ -106,7 +106,7 @@
 
                             <div>
                                 <select id="country" class="form-control @error('country') is-invalid @enderror" name="country" value="{{ old('country') }}" required autocomplete="country">
-                                <!-- <option value="arg">Argentina</option> -->
+                                <option value="">Seleccione un pais</option>
                                   </select>
                                 @error('country')
                                     <span class="invalid-feedback" role="alert">
@@ -116,6 +116,21 @@
                             </div>
                         </div>
 
+                        <div class="field-group">
+                            <div id="state">
+                            <label for="prov">{{ __('Provincia') }}</label>
+
+
+                                <select id="prov" class="form-control @error('prov') is-invalid @enderror" name="prov" value="{{ old('prov') }}" required autocomplete="prov">
+                                <option value="">Seleccione una provincia</option>
+                                  </select>
+                                @error('prov')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
 
                         <div class="field-group">
                             <label for="password">{{ __('Contraseña') }}</label>
