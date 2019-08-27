@@ -97,7 +97,8 @@ class RegisterController extends Controller
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
             'avatar' => basename($data['avatar']->store("public")),
-            'country' => $data['country']
+            'country' => $data['country'],
+            'state' => $data['prov']
         ]);
     }
 }
