@@ -18,6 +18,11 @@
         <li><p><span>Descripción: </span> {{ $productDetail->description }}</p></li>
       </ul>
     </div>
+
+
+
+
+@auth
 <div class="edit-delete-product">
   <form action="/products/{{ $productDetail->id }}" method="post">
     @csrf
@@ -29,6 +34,7 @@
   </form>
     <a href="/products/edit/{{ $productDetail->id }}" class="edit-product">Editar producto</a>
 </div>
+@endauth
 
   </div>
 
