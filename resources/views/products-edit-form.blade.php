@@ -40,6 +40,19 @@
       @endif
     </div>
     <div class="field-group">
+      <label for="Categoria">Categoria</label>
+      <select class="form-control" name="category_id">
+      <option value="">Seleccione una categoria</option>
+        @foreach ($categories as $category)
+          <option value="{{ $category->id }}"> {{ $category->name }} </option>
+        @endforeach
+      </select>
+      @if ($errors->has('category_id'))
+        <p style="color: red;">{{ $errors->first('category_id') }}</p>
+      @endif
+
+    </div>
+    <div class="field-group">
       <label for="dimension">Dimensión</label>
       <input type="text" id="dimension" name="dimension" value="{{$productToEdit->dimension}}" class="" >
       @if ($errors->has('dimension'))
