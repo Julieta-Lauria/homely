@@ -8,8 +8,8 @@
 <div class="form-container">
     <div class="row justify-content-center">
         <div>
-            <div class="card">
-                <div class="card-header"><h2>{{ __('Crear cuenta') }}</h2></div>
+            <div class="">
+                <div class=""><h2>{{ __('Crear cuenta') }}</h2></div>
 
                 <div>
                     <form method="POST" class="access-form" action="{{ route('register') }}" enctype="multipart/form-data">

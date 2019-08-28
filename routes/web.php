@@ -38,6 +38,10 @@ Route::get("/politica", function(){
   return view("politica");
 });
 
+Route::get("/nosotros", function(){
+  return view("nosotros");
+});
+
 Route::get("/locations", function(){
   return view("locations");
 });

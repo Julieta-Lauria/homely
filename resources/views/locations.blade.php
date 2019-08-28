@@ -1,7 +1,7 @@
 @extends("plantilla")
 
 @section("titulo")
-  Contacto
+  Sucursales
 @endsection
 
 @section("principal")

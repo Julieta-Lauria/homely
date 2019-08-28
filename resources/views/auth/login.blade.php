@@ -6,10 +6,10 @@
 
 @section("principal")
 <div class="form-container">
-  <div class="row justify-content-center">
+  <div class="">
     <div>
-      <div class="card">
-        <div class="card-header">
+      <div class="">
+        <div class="">
           <h2>{{ __('Iniciar Sesión') }}</h2>
 
 
@@ -56,7 +56,7 @@
                   </label>
                 </div>
 
-            <div class="form-group row mb-0">
+            <div class="">
 
                       <div class="login-button">
                         <button type="submit" >

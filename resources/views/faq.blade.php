@@ -6,13 +6,13 @@
 
 @section("principal")
 <section>
-  <div class="container">
-    <h2> Centro de Ayuda </h2>
+  <div class="main-container">
+    <h2 class="lora-h2"> Centro de Ayuda </h2>
     <div class="buscador">
       <input type="text" name="buscador" id="buscador" placeholder="Buscar.." value="">
     </div>
     <hr>
-    <h2>Preguntas Frecuentes</h2>
+    <h2 class="lora-h2">Preguntas Frecuentes</h2>
     <hr>
     <div class="container-preguntas">
 <!--    *******************  TABS  *******************    -->

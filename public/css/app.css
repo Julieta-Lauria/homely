@@ -185,7 +185,7 @@ section a {
 
 
 /* --------------- CONTAINER PRINCIPAL ------------ */
-section .container{
+section .main-container{
   width: 100%;
   margin: 0;
   padding: 0;
@@ -338,6 +338,12 @@ article .container-articulo-img{
 }
 /* --------------- /ARTICULO CATEGORIAS ------------ */
 
+/* --------------- /NOSOTROS ------------ */
+.about-photo{
+  width: 100%;
+  height: 350px;
+}
+
 
 /* -**************************- PREGUNTAS FRECUENTES -************************- */
 section .container .container-preguntas{
@@ -443,6 +449,14 @@ section .pestana:checked + .label + .panel {
   margin-bottom: 10%;
 }
 
+.instagram-feed a{
+  margin-bottom:5%;
+}
+
+.col-md-3 img:hover{
+  opacity: 0.3;
+}
+
 .instagram-2,
 .instagram-3,
 .instagram-4 {
@@ -493,7 +507,7 @@ section .pestana:checked + .label + .panel {
 
 .subscription-form input{
   line-height: 3;
-  width:60%;
+  /* width:60%; */
   font-family: 'Lora', serif;
   padding-left:5%;
 }
