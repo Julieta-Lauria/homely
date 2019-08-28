@@ -11,7 +11,7 @@
 
           <article class="article_carrito">
             <p>IMG</p>
-            <p>Nombre Producto</p>
+            {{-- <p>{{$productsCarrito->name}}</p> --}}
             <p>Precio</p>
           </article>
 

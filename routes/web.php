@@ -26,6 +26,23 @@ Route::delete('/products/{id}', 'ProductsController@destroy');
 Route::get('/categorias', 'CategoriesController@index');
 Route::get('/categorias/{name}', 'CategoriesController@showCategories');
 
+
+Route::get("/cart", "CarritoController@show");
+
+
+Route::post("/cart/add/{id}", "CarritoController@create");
+
+
+Route::post("/cart/edit/{id}", "CarritoController@edit");
+
+
+Route::delete("/cart/{id}", "CarritoController@delete");
+
+
+
+
+
+
 Route::get("/index", function(){
   return view("index");
 });
@@ -36,10 +53,6 @@ Route::get("/faq", function(){
 
 Route::get("/politica", function(){
   return view("politica");
-});
-
-Route::get("/nosotros", function(){
-  return view("nosotros");
 });
 
 Route::get("/locations", function(){
@@ -66,7 +79,7 @@ Route::get("/categoria", function(){
   return view("categoria");
 });
 
-Route::get("/carrito", function(){
+Route::get("/carrito", /*"CarritoController@index",*/ function(){
   return view("carrito");
 });
 
