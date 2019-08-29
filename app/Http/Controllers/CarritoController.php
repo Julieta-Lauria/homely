@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 use App\Product;
 use App\Cart;
@@ -16,7 +16,7 @@ class CarritoController extends Controller
 
   public function edit($id, Request $request)
   {
-    $cart = Cart::find(1);
+    $cart = Cart::find($id);
     $product = Product::find($id);
     $cart->products()->sync([
       $id => [
@@ -30,21 +30,53 @@ class CarritoController extends Controller
 
   public function create($id)
   {
-  $cart = Cart::find(1);
-  $product = Product::find($id);
-  $cart->products()->attach($product, [
-    "quantity" => 1,
-    "total_price" => $product->price,
-  ]);
+  $cart = Cart::where('user_id',Auth::user()->id);
+
+    if(!$cart->exists()){
+      $nuevoCart = Cart::create(['user_id'=>Auth::user()->id]);
+
+      $product = Product::find($id);
+      $nuevoCart->products()->attach($product, [
+      "quantity" => 1,
+      "cart_id" => $nuevoCart->id,
+      "total_price" => $product->price,
+      ]);
+      $nuevoCart->save();
+    }else{
+      $product = Product::find($id);
+      $cart->first()->products()->attach($product, [
+        "quantity" => 1,
+        "cart_id" => $cart->first()->id,
+        "total_price" => $product->price,
+      ]);
+      $cart->first()->save();
+    }
 
   return redirect()->back();
   }
 
-  public function delete($id)
+  public function delete($id)  // Esta borrando pero borra todo
   {
-    $cart = Cart::find(1);
-    $product = Product::find($id);
-    $cart->products()->detach($product);
+    $cart = Cart::where('user_id',Auth::user()->id);
+
+      if(!$cart->exists()){
+        $nuevoCart = Cart::create(['user_id'=>Auth::user()->id]);
+
+        $product = Product::find($id);
+        $nuevoCart->products()->detach($product, [
+        "quantity" => 1,
+        "cart_id" => $nuevoCart->id,
+        "total_price" => $product->price,
+        ]);
+        $nuevoCart->save();
+      }else{
+        $product = Product::find($id);
+        $cart->first()->products()->detach($product, [
+          "quantity" => 1,
+          "cart_id" => $cart->first()->id,
+          "total_price" => $product->price,
+        ]);
+      }
 
     return redirect()->back();
   }

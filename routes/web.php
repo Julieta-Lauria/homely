@@ -75,11 +75,9 @@ Route::get("/register", function(){
 });
 Auth::routes();
 
-Route::get("/categoria", function(){
-  return view("categoria");
-});
+Route::get("/categoria","CategoriaController@index");
 
-Route::get("/carrito", /*"CarritoController@index",*/ function(){
+Route::get("/carrito", function(){
   return view("carrito");
 });
 
