@@ -14,7 +14,7 @@ class AddStateToUsers extends Migration
      public function up()
     {
       Schema::table('users', function (Blueprint $table) {
-          $table->string('state',50)->after('country');
+          $table->string('state',50)->nullable()->after('country');
         });
     }
 
@@ -29,5 +29,5 @@ class AddStateToUsers extends Migration
            $table->dropColumn(['state']);
          });
      }
-    
+
 }
