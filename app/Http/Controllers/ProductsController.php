@@ -179,5 +179,14 @@ class ProductsController extends Controller
       return redirect('/products');
     }
 
+    public function searchProducts(Request $request){
+      //$search = $request->all();
+      $search2 = $request->input('busqueda');
+      //dd($search);
+      //dd($search2);
+      $resultado = Product::where('name', 'like', '%'.$search2.'%')->get();
+      $resultado = compact('resultado');
+      return view('search', $resultado);
+    }
 
 }

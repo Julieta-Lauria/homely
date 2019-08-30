@@ -81,9 +81,10 @@
    <nav id="otros">
     <ul>
      <li id="pruebaa">
-      <form class="search" action="index.html" method="post">
+      <form class="search" action="/search" method="post">
+          @csrf
         <fieldset>
-         <input type="search" id="busqueda">
+         <input type="text" id="busqueda" name="busqueda">
          <button type="submit" name="button">
           <i class="fas fa-search"></i>
          </button>
