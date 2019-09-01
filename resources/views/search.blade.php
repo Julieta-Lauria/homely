@@ -18,9 +18,9 @@
             <li>
 
               <div class="vista-producto">
-                  <a href="/products/{{$product->id}}">{{$product->name}}</a>
-                  <img src="/storage/{{ $product->photo }}" class="product-photo">
-                  <p class=prod-price>${{ $product->price }}</p>
+                <a href="/products/{{$product->id}}"><img src="/storage/{{ $product->photo }}" class="product-photo"></a>
+                <a href="/products/{{$product->id}}">{{$product->name}}</a>
+                <a href="/products/{{$product->id}}"><p class=prod-price>${{ $product->price }}</p></a>
               </div>
 
             </li>
