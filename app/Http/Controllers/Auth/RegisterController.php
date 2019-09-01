@@ -67,7 +67,7 @@ class RegisterController extends Controller
           'username.required' => 'Completar nombre de usuario',
           'username.min' => 'El usuario debe tener 5 carácteres como mínimo',
           'username.unique' => 'Este nombre de usuario no se encuentra disponible',
-          'address.required' => 'Es obligatorio ingresar el precio',
+          'address.required' => 'Es obligatorio ingresar la direccion',
           'email.required' => 'Es necesario un email',
           'email.unique' => 'Esta direccion de mail no se encuentra disponible',
           'password.required' => 'Escriba la Contraseña',
@@ -101,5 +101,7 @@ class RegisterController extends Controller
             'state' => $data['prov']
         ]);
     }
+
+
 }
 //verificado que guarda la imgen ok, revisar nombre de guardado de la imagen

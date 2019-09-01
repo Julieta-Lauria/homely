@@ -42,8 +42,6 @@ Route::delete("/cart/{id}", "CarritoController@delete");
 
 
 
-
-
 Route::get("/index", function(){
   return view("index");
 });
@@ -84,3 +82,4 @@ Route::get("/carrito", function(){
 
 
 Route::get('/home', 'HomeController@index')->name('home');
+Route::put('/home/{id}', 'HomeController@updateUser');
