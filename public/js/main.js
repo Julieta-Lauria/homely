@@ -72,8 +72,6 @@ window.onload = function(){
 
 }
 
-// Validacion del formulario de registro - NO FUNCIONA BIEN
-
 // Primero capturamos los campos
 // // Validamos los campos
 var campoNombre = document.querySelector('input[name=name]');
@@ -126,8 +124,8 @@ campoEmail.onblur = function(){
 // // Corroboramos que el formulario no se envie si estos campos no estan bien completados
 var elFormulario = document.querySelector('.theForm');
 elFormulario.onsubmit = function(event){
-  if(campoNombre.value == ''){
-    alert("El campo nombre es obligatorio");
+  if(campoNombre.value == '' || campoNombre.value == '' ){
+    alert("Faltan completar campos obligatorios");
     event.preventDefault();
   }
 }
