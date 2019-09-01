@@ -60,6 +60,10 @@ Route::get("/locations", function(){
   return view("locations");
 });
 
+Route::get("/nosotros", function(){
+  return view("nosotros");
+});
+
 //El loguin va por Auth de laravel
 //Route::get("/login", "UsuarioController@login");
 
