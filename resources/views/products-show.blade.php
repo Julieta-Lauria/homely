@@ -19,9 +19,6 @@
       </ul>
     </div>
 
-
-
-
 @auth
 <div class="edit-delete-product">
   <form action="/products/{{ $productDetail->id }}" method="post">

@@ -12,13 +12,14 @@
   </div>
 </div>
   <div class="products-container">
-    <ul>
+    <ul class="container-vista">
       @foreach ($productsCategory->products as $product)
       <li>
         <div class="vista-producto">
-          <img src="/storage/{{ $product->photo }}" class="product-photo">
+          <a href="/products/{{$product->id}}"><img src="/storage/{{ $product->photo }}" class="product-photo"></a>
           <a href="/products/{{$product->id}}">{{$product->name}}</a>
-          <p class=prod-price>${{ $product->price }}</p>
+          <a href="/products/{{$product->id}}"><p class=prod-price>${{ $product->price }}</p></a>
+
         </div>
 
       </li>
