@@ -22,16 +22,9 @@ class CategoriesController extends Controller
   {
     $categories = Category::where('name', $name)->get();
     $id = $categories[0]->id;
-    //$nana = Category::find($id)->products();
+
 //Busco en categorias con los datos de la relacion de productos, solo en el id de la categoria definida
     $productsCategory = Category::with('products')->find($id);
-
-
-    //dd($nana);
-
-
-
-
 
     $vac = compact("productsCategory");
 

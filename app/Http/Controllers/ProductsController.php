@@ -152,7 +152,7 @@ class ProductsController extends Controller
       $productToUpdate->name = $request->input('name');
       $productToUpdate->price = $request->input('price');
       $productToUpdate->color_id = $request->input('color_id');
-      // $productToUpdate->category_id = $request->input('category_id');
+      $productToUpdate->category_id = $request->input('category_id');
       $productToUpdate->dimension = $request->input('dimension');
       $productToUpdate->description = $request->input('description');
 
@@ -166,6 +166,9 @@ class ProductsController extends Controller
       return redirect('/products');
     }
 
+
+  //-------------------------------------------------------------------------------------------------------------
+
     /**
      * Remove the specified resource from storage.
      *
@@ -174,10 +177,13 @@ class ProductsController extends Controller
      */
     public function destroy($id)
     {
-      $productToDelete = Product::find($id);
+      $productToDelete = Product::with('categories')->find($id);
+      $productToDelete->categories()->detach();
       $productToDelete->delete();
       return redirect('/products');
     }
+
+//-------------------------------------------------------------------------------------------------------------
 
     public function searchProducts(Request $request){
       //$search = $request->all();
