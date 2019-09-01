@@ -16,7 +16,7 @@
     <hr>
     <div class="container-preguntas">
 <!--    *******************  TABS  *******************    -->
-        <div class="tabs">
+        <div class="tabs justify-content-center">
         <input name="tabs" type="radio" id="tab-general" checked="checked" class="pestana"/>
         <label for="tab-general" class="label">General</label>
         <div class="panel">

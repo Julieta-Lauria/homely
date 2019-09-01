@@ -8,19 +8,29 @@
 
   <div class="banner-prod">
     <div class="banner-h2">
-      <h2 class="lora-h2">Todos los productos</h2>
+      <h2 class="lora-h2">Resultados de la búsqueda</h2>
     </div>
   </div>
   <div class="products-container">
-    <ul>
+    <ul class="container-vista">
 
-      @foreach ($resultado as $product)
-      <li>
-        <a href="/products/{{$product->id}}">{{$product->name}}</a>
-        <img src="/storage/{{ $product->photo }}" class="product-photo">
-        <p class=prod-price>${{ $product->price }}</p>
-      </li>
-      @endforeach
+            @forelse ($resultado as $product)
+            <li>
+
+              <div class="vista-producto">
+                  <a href="/products/{{$product->id}}">{{$product->name}}</a>
+                  <img src="/storage/{{ $product->photo }}" class="product-photo">
+                  <p class=prod-price>${{ $product->price }}</p>
+              </div>
+
+            </li>
+            @empty
+
+            <p>No hay resultados posibles..</p>
+
+            @endforelse
+
+
     </ul>
   </div>
 
