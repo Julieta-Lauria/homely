@@ -9,7 +9,7 @@
   <div class="main-container"><!-- Container Principal de seccion-->
 
         <div class="img-principal"><!-- Imagen portada principal -->
-          <a href="#"> <!--Link imagen principal -->
+          <a href="{{ url('/products')}}"> <!--Link imagen principal -->
           <img src="img/main-img-mobile.jpg" alt="" class="imagen-principal-mobile">
           <img src="img/main-img-full.jpg" alt="" class="main-img-full"><!--!! vER DE CORREGIR, REALENTIZA CARGA MOBILE-->
           </a><!--/Link imagen principal -->
@@ -25,27 +25,27 @@
 
       <article class="container-articulo-img"> <!-- Container del primer articulo solo imagen -->
         <div class="mySlides">
-          <a href="#" class="a-lista-destacado-img"> <!--Link articulo destacado -->
+          <a href="{{ url('/products/18')}}" class="a-lista-destacado-img"> <!--Link articulo destacado -->
           <img src="img/cat1.jpg" alt="" class="img-articulo-destacado1">
           </a><!--/Link articulo destacado -->
         </div>
         <div class="mySlides">
-          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+          <a href="{{ url('/products/4')}}" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
             <img src="img/articulo-destacado2.jpg" alt="" class="img-articulo-destacado2">
           </a><!--/Articulos destacados lista de imagenes -->
         </div>
         <div class="mySlides">
-          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+          <a href="{{ url('/products/3')}}" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
             <img src="img/articulo-destacado3.jpg" alt="" class="img-articulo-destacado3">
           </a><!--/Articulos destacados lista de imagenes -->
         </div>
         <div class="mySlides">
-          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+          <a href="{{ url('/products/2')}}" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
             <img src="img/articulo-destacado4.jpg" alt="" class="img-articulo-destacado4">
           </a><!--/Articulos destacados lista de imagenes -->
         </div>
         <div class="mySlides">
-          <a href="#" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
+          <a href="{{ url('/products/14')}}" class="a-lista-destacado-img"> <!--Articulos destacados lista de imagenes -->
             <img src="img/articulo-destacado5.jpg" alt="" class="img-articulo-destacado5">
           </a><!--/Articulos destacados lista de imagenes -->
         </div>
@@ -63,26 +63,26 @@
 
       <div class="lista-categorias">
         <article class="container-articulo-categoria cat1"><!-- (primer)Container de categoria de prod. con leer mas -->
-          <a href="#Categoria1">
+          <a href="{{ url('/categorias/sillones')}}">
           <strong>Sillones</strong></a>
         </article><!-- /(primer)Container de categoria de prod. con leer mas -->
 
 
         <article class="container-articulo-categoria cat2"><!-- (segundo)Container de categoria de prod. con leer mas -->
-          <a href="#Categoria2">
+          <a href="{{ url('/categorias/sillas')}}">
           <strong>Sillas</strong></a>
         </article><!-- /(segundo)Container de categoria de prod. con leer mas -->
 
 
         <article class="container-articulo-categoria cat3"><!-- (tercer)Container de categoria de prod. con leer mas -->
-          <a href="#Categoria3">
+          <a href="{{ url('/categorias/mesas')}}">
           <strong>Mesas</strong></a>
         </article><!-- /(tercer)Container de categoria de prod. con leer mas -->
 
 
         <article class="container-articulo-categoria cat4"><!-- (cuarto)Container de categoria de prod. con leer mas -->
-          <a href="#Categoria4">
-          <strong>Sillones</strong></a>
+          <a href="{{ url('/categorias/escritorios')}}">
+          <strong>Escritorios</strong></a>
         </article><!-- /(cuarto)Container de categoria de prod. con leer mas -->
       </div><!-- /LISTA DE CATEGORIAS -->
 

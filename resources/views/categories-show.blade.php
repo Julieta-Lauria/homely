@@ -5,19 +5,25 @@
 @endsection
 
 @section("principal")
-<div class="products-container">
-  <h2>Listado de productos</h2>
-  <p>- Ingresar en cada producto para ver sus detalles -</p>
-  <hr>
+
+<div class="banner-prod">
+  <div class="banner-h2">
+    <h2 class="lora-h2">{{$productsCategory->name}}</h2>
+  </div>
+</div>
+  <div class="products-container">
     <ul>
       @foreach ($productsCategory->products as $product)
       <li>
+        <div class="vista-producto">
+          <img src="/storage/{{ $product->photo }}" class="product-photo">
+          <a href="/products/{{$product->id}}">{{$product->name}}</a>
+          <p class=prod-price>${{ $product->price }}</p>
+        </div>
 
-        <a href="/products/{{$product->id}}">{{$product->name}}</a>
-        <hr>
       </li>
       @endforeach
-      
+
     </ul>
   </div>
 

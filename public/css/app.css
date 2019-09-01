@@ -1245,6 +1245,9 @@ section .container-articulo-img{
 
 /****** footer /LOGIN/REGISTER ********/
 @media only screen and (min-width:768px) {
+  .homely{
+    font-size: 35px;
+  }
   .form-container{
     margin-bottom: 10%;
   }
@@ -1296,6 +1299,9 @@ section .container-articulo-img{
 /* FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - FIN HEADER PRIMER AVANCE - */
 
 @media (min-width:1200px) {
+  .homely{
+    font-size: 50px;
+  }
 
   .banner_negro ul {
     display: flex;
@@ -1444,8 +1450,30 @@ section .container-articulo-img{
   align-items: center;
 }
 
+/* Vista general de productos */
+.banner-prod{
+  height: 250px;
+  width:100%;
+  background-color: #d6d6d6;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+    align-items: center;
+    margin-bottom: 5%;
+}
 
+.banner-h2{
+  height: 120px;
+  width:50%;
+  padding-top: 30px;
+  background-color: #efefef;
+}
 
+.vista-producto{
+  display: flex;
+  flex-direction: column;
+}
 
   /*el position fixed del header de arriba se pone por encima de la pagina.
   /* **************************** MAIN SECTION min1200 PX**************************************/

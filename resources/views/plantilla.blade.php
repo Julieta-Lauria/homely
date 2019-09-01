@@ -20,10 +20,10 @@
   </div>
   <header> <!-- Header segundo avance -->
    <div class="nav">
-    <a href="{{ url('/index') }}"><h1 style="font-size:50px;">/Homely\</h1></a>
+    <a href="{{ url('/index') }}"><h1 class="homely">/Homely\</h1></a>
     <nav id="categorias">
      <ul>
-      <li><a href="#">Sillas</a>
+      <li><a href="{{ url('/categorias/sillas')}}">Sillas</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -42,7 +42,7 @@
           </ul>
         </ul>
       </li>
-      <li><a href="#">Sillones</a>
+      <li><a href="{{ url('/categorias/sillones')}}">Sillones</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -55,7 +55,7 @@
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
         </ul></li>
-      <li><a href="#">Mesas</a>
+      <li><a href="{{ url('/categorias/mesas')}}">Mesas</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
@@ -68,7 +68,7 @@
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
         </ul></li>
-      <li><a href="#">Escritorios</a>
+      <li><a href="{{ url('/categorias/escritorios')}}">Escritorios</a>
         <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
