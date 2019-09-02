@@ -49,7 +49,7 @@
 
 <!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
 
-                                          <input name="tabs" type="radio" id="tab-compras" class="pestana"/>
+                                        <!--   <input name="tabs" type="radio" id="tab-compras" class="pestana"/>
                                           <label for="tab-compras" class="label">Carrito</label>
                                           <div class="panel">
                                           <h1>Carrito</h1>
@@ -61,7 +61,7 @@
 
 
 
-                                          </div>
+                                          </div>-->
 
 
 <!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
@@ -187,6 +187,20 @@
 </div> <!--    ************// DIV CONTAINER PREGUNTAS**********    -->
 
 
+
+
+        <!--    ************ carrito link profile **********    -->
+          <div class="profile-button" aria-labelledby="">
+                <button> <a class="" name="send" href="{{ url('/cart') }}">
+                 {{ __('Carrito') }}
+              </a>
+              </button>
+          </div>
+        <!--    ************ carrito link profile **********    -->
+
+
+
+
         <!--    ************ LOGOUT BUTTON **********    -->
           <div class="profile-button" aria-labelledby="">
                 <button> <a class="" name="send" href="{{ route('logout') }}"
@@ -195,13 +209,14 @@
                  {{ __('Cerrar Sesión') }}
 
               </a>
-              </button>
+
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
           </div>
         <!--    ************ LOGOUT BUTTON **********    -->
+
 
 
 </div>
