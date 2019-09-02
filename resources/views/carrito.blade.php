@@ -16,15 +16,26 @@
       @foreach ($carrito as $producto)
       <li >
           <div class="vista-producto">
-            <a href=""><img src="" class="product-photo"></a>
-            <a href="">{{ $producto->name}}</a>
-            <a href=""><p class=prod-price>${{ $producto->id }}</p></a>
+            <a href="/products/{{$producto->id}}"><img src="/storage/{{ $producto->photo }}" class="product-photo"></a>
+            <a href="">Producto: {{ $producto->name}}</a>
+            <a href=""><p class=prod-price>Precio: ${{ $producto->price }}</p></a>
           </div>
       </li>
 
       @endforeach
+
     </ul>
+
+    @php $sum = 0; @endphp
+    @foreach($carrito as $producto)
+
+       @php $sum += $producto->price; @endphp
+    @endforeach
+
+
+    <p>Precio Total de tu Carrito: ${{ $sum }}</p>
   </div>
+
 
 @endsection
 
