@@ -35,19 +35,13 @@
                                                         <p><b>Nombre: </b>{{ $dataUser->name }}</p>
                                                         <p><b>Apellido:</b> {{ $dataUser->last_name }}</p>
                                                         <p><b>Email:</b> {{ $dataUser->email }}</p>
+                                                        <p><b>Dirección:</b> {{ $dataUser->address }}</p>
                                                   </div>
 
                                                 <div class="col-lg-4 pull-lg-8 text-xs-center">
                                                       <img src="/storage/{{ $dataUser->avatar }}" class="m-x-auto img-fluid img-circle" alt="avatar">
 
-                                                      <div class="register-button">
-                                                        <button>
-                                                        <label class="custom-file">
-                                                            <input type="file" id="file" class="custom-file-input">
-                                                            <span class="custom-file-control ">Elegir avatar</span>
-                                                        </label>
-                                                        </button>
-                                                      </div>
+
                                                 </div>
 
                                                 </div>
@@ -194,17 +188,18 @@
 
 
         <!--    ************ LOGOUT BUTTON **********    -->
-          <div class="login-button" aria-labelledby="">
-              <button>  <a class="" name="send" href="{{ route('logout') }}"
+          <div class="profile-button" aria-labelledby="">
+                <button> <a class="" name="send" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                  {{ __('Cerrar Sesión') }}
+                 {{ __('Cerrar Sesión') }}
+
               </a>
+              </button>
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
-              </button>
           </div>
         <!--    ************ LOGOUT BUTTON **********    -->
 
