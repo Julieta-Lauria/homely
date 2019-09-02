@@ -20,6 +20,10 @@
                       <div class="container-preguntas row justify-content-center">
                       <!--    *******************  TABS  *******************    -->
                           <div class="tabs justify-content-center">
+
+
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
+
                                           <input name="tabs" type="radio" id="tab-general" checked="checked" class="pestana"/>
                                           <label for="tab-general" class="label">Perfil</label>
                                           <div class="panel">
@@ -48,6 +52,8 @@
                                                 </div>
                                           </div>
 
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
+
                                           <input name="tabs" type="radio" id="tab-compras" class="pestana"/>
                                           <label for="tab-compras" class="label">Carrito</label>
                                           <div class="panel">
@@ -56,12 +62,14 @@
 
                                           </div>
 
+
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
                                           <input name="tabs" type="radio" id="tab-pagos" class="pestana"/>
                                           <label for="tab-pagos" class="label">Editar</label>
                                           <div class="panel">
                                           <h1>Editar Datos</h1>
 
-                                          <!--    *************************************************  CARD USER/EDIT  ****************************************************************    -->
+                                                    <!--    *************************************************  CARD USER/EDIT  ****************************************************************    -->
 
 
 
@@ -124,7 +132,7 @@
 
                                                                             <div>
                                                                                 <select id="country" class="form-control @error('country') is-invalid @enderror" name="country"  autocomplete="country">
-                                                                                <option value="{{$dataUser->country}}">Seleccione un pais</option>
+                                                                                <option value="{{$dataUser->country}}">{{$dataUser->country}}</option>
                                                                                   </select>
                                                                                 @error('country')
                                                                                     <span class="invalid-feedback" role="alert">
@@ -140,7 +148,7 @@
 
 
                                                                                 <select id="prov" class="form-control @error('prov') is-invalid @enderror" name="prov" autocomplete="prov">
-                                                                                <option  value="{{$dataUser->state}}">Seleccione una provincia</option>
+                                                                                <option  value="{{$dataUser->state}}">{{$dataUser->state}}</option>
                                                                                   </select>
                                                                                 @error('prov')
                                                                                     <span class="invalid-feedback" role="alert">
@@ -174,6 +182,7 @@
 
 
                                       </div><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    -->
+  <!--    ****************************************************************  56465465654     //PRESTAÑAS FIN     6456465465465  *******************************************************************************    -->
 
 
         <!--    ************ LOGOUT BUTTON **********    -->
