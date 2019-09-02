@@ -14,6 +14,15 @@ class CarritoController extends Controller
   return view("carrito");
   }
 
+  public function listado(){
+    $carrito = Cart::where('user_id',Auth::User()->id)->get()->first()->products()->get();
+    
+    $vac = compact("carrito");
+    
+    return view("carrito", $vac);
+  }
+
+
   public function edit($id, Request $request)
   {
     $cart = Cart::find($id);

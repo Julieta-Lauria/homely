@@ -28,7 +28,8 @@ Route::get('/categorias', 'CategoriesController@index');
 Route::get('/categorias/{name}', 'CategoriesController@showCategories');
 
 
-Route::get("/cart", "CarritoController@show");
+
+Route::get("/cart", "CarritoController@listado");
 
 
 Route::post("/cart/add/{id}", "CarritoController@create");
