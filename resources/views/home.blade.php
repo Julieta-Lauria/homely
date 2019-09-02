@@ -39,13 +39,14 @@
 
                                                 <div class="col-lg-4 pull-lg-8 text-xs-center">
                                                       <img src="/storage/{{ $dataUser->avatar }}" class="m-x-auto img-fluid img-circle" alt="avatar">
-                                                      <div class="register-button">
 
+                                                      <div class="register-button">
+                                                        <button>
                                                         <label class="custom-file">
                                                             <input type="file" id="file" class="custom-file-input">
-                                                            <span class="custom-file-control ">Choose file</span>
+                                                            <span class="custom-file-control ">Elegir avatar</span>
                                                         </label>
-
+                                                        </button>
                                                       </div>
                                                 </div>
 
@@ -58,6 +59,12 @@
                                           <label for="tab-compras" class="label">Carrito</label>
                                           <div class="panel">
                                           <h1>Carrito</h1>
+
+
+
+
+
+
 
 
                                           </div>
@@ -183,23 +190,24 @@
 
                                       </div><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    -->
   <!--    ****************************************************************  56465465654     //PRESTAÑAS FIN     6456465465465  *******************************************************************************    -->
+</div> <!--    ************// DIV CONTAINER PREGUNTAS**********    -->
 
 
         <!--    ************ LOGOUT BUTTON **********    -->
           <div class="login-button" aria-labelledby="">
-              <a class="" name="send" href="{{ route('logout') }}"
+              <button>  <a class="" name="send" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
+                  {{ __('Cerrar Sesión') }}
               </a>
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
               </form>
+              </button>
           </div>
         <!--    ************ LOGOUT BUTTON **********    -->
 
-      </div> <!--    ************// DIV CONTAINER PREGUNTAS**********    -->
 
 </div>
 

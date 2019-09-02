@@ -428,6 +428,7 @@ section .panel { /* --- Contenido dentro tabs ----- */
   display: none;
   padding: 20px 30px 30px;
   background: #fff;
+  width: 100%;
 }
 
 section .pestana:checked + .label + .panel {
@@ -810,6 +811,11 @@ footer p{
   background-color: white;
   color: black;
   border:1px solid black;
+}
+
+.login-button button a{
+  text-decoration: none;
+  border: none;
 }
 
 /* Estilo para resaltar errores de logueo o registracion de usuarios */
