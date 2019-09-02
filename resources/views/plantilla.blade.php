@@ -24,7 +24,7 @@
     <nav id="categorias">
      <ul>
       <li><a href="{{ url('/categorias/sillas')}}">Sillas</a>
-        <ul id="menu_living">
+        <!-- <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
            <li><a href="#">Ipsum</a></li>
@@ -40,10 +40,10 @@
            <li class="li_col"><a href="#">Ipsum</a></li>
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
-        </ul>
+        </ul> -->
       </li>
       <li><a href="{{ url('/categorias/sillones')}}">Sillones</a>
-        <ul id="menu_living">
+        <!-- <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
            <li><a href="#">Ipsum</a></li>
@@ -54,9 +54,10 @@
            <li class="li_col"><a href="#">Ipsum</a></li>
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
-        </ul></li>
+        </ul> -->
+      </li>
       <li><a href="{{ url('/categorias/mesas')}}">Mesas</a>
-        <ul id="menu_living">
+        <!-- <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
            <li><a href="#">Ipsum</a></li>
@@ -67,15 +68,17 @@
            <li class="li_col"><a href="#">Ipsum</a></li>
            <li class="li_col"><a href="#">Lorem</a></li>
           </ul>
-        </ul></li>
+        </ul> -->
+      </li>
       <li><a href="{{ url('/categorias/escritorios')}}">Escritorios</a>
-        <ul id="menu_living">
+        <!-- <ul id="menu_living">
           <ul>
            <li><a href="#">Lorem</a></li>
            <li><a href="#">Ipsum</a></li>
            <li><a href="#">Lorem</a></li>
           </ul>
-        </ul></li>
+        </ul> -->
+      </li>
      </ul>
    </nav>
    <nav id="otros">

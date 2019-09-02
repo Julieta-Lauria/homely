@@ -152,7 +152,7 @@ class ProductsController extends Controller
       $productToUpdate->name = $request->input('name');
       $productToUpdate->price = $request->input('price');
       $productToUpdate->color_id = $request->input('color_id');
-      $productToUpdate->category_id = $request->input('category_id');
+      // $productToUpdate->category_id = $request->input('category_id');
       $productToUpdate->dimension = $request->input('dimension');
       $productToUpdate->description = $request->input('description');
 
