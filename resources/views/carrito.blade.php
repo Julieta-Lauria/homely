@@ -8,7 +8,7 @@
 
   <div class="banner-prod">
     <div class="banner-h2">
-      <h2 class="lora-h2">Productos</h2>
+      <h2 class="lora-h2">Mi carrito</h2>
     </div>
   </div>
   <div class="products-container">
