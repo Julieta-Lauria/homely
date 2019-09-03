@@ -428,6 +428,7 @@ section .panel { /* --- Contenido dentro tabs ----- */
   display: none;
   padding: 20px 30px 30px;
   background: #fff;
+  width: 100%;
 }
 
 section .pestana:checked + .label + .panel {
@@ -812,6 +813,15 @@ footer p{
   border:1px solid black;
 }
 
+.login-button button a{
+  text-decoration: none;
+  border: none;
+}
+.login-button button a :hover{
+  text-decoration: none;
+  border: none;
+}
+
 /* Estilo para resaltar errores de logueo o registracion de usuarios */
 /* Se agrega clase laravel invalid-feed para que figure en rojo tmb */
 
@@ -898,6 +908,43 @@ input.error {
   margin-top: 5%;
   margin-bottom: 5%;
 }
+
+/* ------------------------------ //PROFILE USER -------**/
+
+
+.profile-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+
+
+.profile-button button{
+  line-height: 3;
+  width:30%;
+  background-color: black;
+  color:white;
+  letter-spacing: 2px;
+  font-family: 'Lato', sans-serif;
+  border:1px solid black;
+  border-radius:4%;
+  font-size:0.9em;
+  margin:0 auto;
+}
+
+
+.profile-button :hover{
+  background-color: white;
+  color: black;
+  border:1px solid black;
+}
+
+/* ------------------------------ //PROFILE USER -------*/
+
+
+
+
 
 /****** footer /LOGIN/REGISTER ********/
 /*------------------------------------------------ FIN MOBILE------------------------------------------------*/

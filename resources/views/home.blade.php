@@ -20,6 +20,10 @@
                       <div class="container-preguntas row justify-content-center">
                       <!--    *******************  TABS  *******************    -->
                           <div class="tabs justify-content-center">
+
+
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
+
                                           <input name="tabs" type="radio" id="tab-general" checked="checked" class="pestana"/>
                                           <label for="tab-general" class="label">Perfil</label>
                                           <div class="panel">
@@ -31,37 +35,42 @@
                                                         <p><b>Nombre: </b>{{ $dataUser->name }}</p>
                                                         <p><b>Apellido:</b> {{ $dataUser->last_name }}</p>
                                                         <p><b>Email:</b> {{ $dataUser->email }}</p>
+                                                        <p><b>Dirección:</b> {{ $dataUser->address }}</p>
                                                   </div>
 
                                                 <div class="col-lg-4 pull-lg-8 text-xs-center">
                                                       <img src="/storage/{{ $dataUser->avatar }}" class="m-x-auto img-fluid img-circle" alt="avatar">
-                                                      <div class="register-button">
 
-                                                        <label class="custom-file">
-                                                            <input type="file" id="file" class="custom-file-input">
-                                                            <span class="custom-file-control ">Choose file</span>
-                                                        </label>
 
-                                                      </div>
                                                 </div>
 
                                                 </div>
                                           </div>
 
-                                          <input name="tabs" type="radio" id="tab-compras" class="pestana"/>
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
+
+                                        <!--   <input name="tabs" type="radio" id="tab-compras" class="pestana"/>
                                           <label for="tab-compras" class="label">Carrito</label>
                                           <div class="panel">
                                           <h1>Carrito</h1>
 
 
-                                          </div>
 
+
+
+
+
+
+                                          </div>-->
+
+
+<!--    ****************************************************************  56465465654     PRESTAÑA     6456465465465  *******************************************************************************    -->
                                           <input name="tabs" type="radio" id="tab-pagos" class="pestana"/>
                                           <label for="tab-pagos" class="label">Editar</label>
                                           <div class="panel">
                                           <h1>Editar Datos</h1>
 
-                                          <!--    *************************************************  CARD USER/EDIT  ****************************************************************    -->
+                                                    <!--    *************************************************  CARD USER/EDIT  ****************************************************************    -->
 
 
 
@@ -124,7 +133,7 @@
 
                                                                             <div>
                                                                                 <select id="country" class="form-control @error('country') is-invalid @enderror" name="country"  autocomplete="country">
-                                                                                <option value="{{$dataUser->country}}">Seleccione un pais</option>
+                                                                                <option value="{{$dataUser->country}}">{{$dataUser->country}}</option>
                                                                                   </select>
                                                                                 @error('country')
                                                                                     <span class="invalid-feedback" role="alert">
@@ -140,7 +149,7 @@
 
 
                                                                                 <select id="prov" class="form-control @error('prov') is-invalid @enderror" name="prov" autocomplete="prov">
-                                                                                <option  value="{{$dataUser->state}}">Seleccione una provincia</option>
+                                                                                <option  value="{{$dataUser->state}}">{{$dataUser->state}}</option>
                                                                                   </select>
                                                                                 @error('prov')
                                                                                     <span class="invalid-feedback" role="alert">
@@ -174,15 +183,33 @@
 
 
                                       </div><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    --><!--    *******************  /TABS  *******************    -->
+  <!--    ****************************************************************  56465465654     //PRESTAÑAS FIN     6456465465465  *******************************************************************************    -->
+</div> <!--    ************// DIV CONTAINER PREGUNTAS**********    -->
+
+
+
+
+        <!--    ************ carrito link profile **********    -->
+          <div class="profile-button" aria-labelledby="">
+                <button> <a class="" name="send" href="{{ url('/cart') }}">
+                 {{ __('Carrito') }}
+              </a>
+              </button>
+          </div>
+        <!--    ************ carrito link profile **********    -->
+
+
 
 
         <!--    ************ LOGOUT BUTTON **********    -->
-          <div class="login-button" aria-labelledby="">
-              <a class="" name="send" href="{{ route('logout') }}"
+          <div class="profile-button" aria-labelledby="">
+                <button> <a class="" name="send" href="{{ route('logout') }}"
                  onclick="event.preventDefault();
                                document.getElementById('logout-form').submit();">
-                  {{ __('Logout') }}
+                 {{ __('Cerrar Sesión') }}
+
               </a>
+
 
               <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                   @csrf
@@ -190,7 +217,7 @@
           </div>
         <!--    ************ LOGOUT BUTTON **********    -->
 
-      </div> <!--    ************// DIV CONTAINER PREGUNTAS**********    -->
+
 
 </div>
 

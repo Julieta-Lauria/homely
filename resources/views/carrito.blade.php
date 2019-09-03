@@ -6,23 +6,39 @@
 
 @section("principal")
 
-    <main id="main_carrito">
-        <section id="section_carrito">
+  <div class="banner-prod">
+    <div class="banner-h2">
+      <h2 class="lora-h2">Productos</h2>
+    </div>
+  </div>
+  <div class="products-container">
+    <ul class="container-vista">
+      @foreach ($carrito as $producto)
+      <li >
+          <div class="vista-producto">
+            <a href="/products/{{$producto->id}}"><img src="/storage/{{ $producto->photo }}" class="product-photo"></a>
+            <a href="">Producto: {{ $producto->name}}</a>
+            <a href=""><p class=prod-price>Precio: ${{ $producto->price }}</p></a>
+          </div>
+      </li>
 
-          <article class="article_carrito">
-            <p>IMG</p>
-            {{-- <p>{{$productsCarrito->name}}</p> --}}
-            <p>Precio</p>
-          </article>
+      @endforeach
 
-            <article class="article_carrito">
-              <img src="../imgs/insta-1.jpg" alt="">
-              <p>Silla</p>
-              <p>$900</p>
-            </article>
+    </ul>
 
-        </section>
-    </main>
-    @endsection
+    @php $sum = 0; @endphp
+    @foreach($carrito as $producto)
 
-    <script src="js/carrito.js"></script>
+       @php $sum += $producto->price; @endphp
+    @endforeach
+
+
+    <p>Precio Total de tu Carrito: ${{ $sum }}</p>
+  </div>
+
+
+@endsection
+
+
+{{-- los a tenian en href lo siguiente: /products/{{$product->id}} --}}
+{{-- la img en src tenia lo siguiente: /storage/{{ $product->photo }} --}}
