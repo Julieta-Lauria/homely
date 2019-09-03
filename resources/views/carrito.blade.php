@@ -13,7 +13,9 @@
   </div>
   <div class="products-container">
     <ul class="container-vista">
+
       @foreach ($carrito as $producto)
+
       <li >
           <div class="vista-producto">
             <a href="/products/{{$producto->id}}"><img src="/storage/{{ $producto->photo }}" class="product-photo"></a>
@@ -21,6 +23,22 @@
             <a href=""><p class=prod-price>Precio: ${{ $producto->price }}</p></a>
           </div>
       </li>
+
+
+      <div class="edit-delete-product">
+
+        <form action="/cart/{{ $producto->id }}" method="post">
+          @csrf
+          <!-- Decimos que aunque en el formulario tengamos metodo post, vamos a usar delete: -->
+          {{ method_field('delete') }}
+          <div class="delete-button">
+            <button type="submit" name="send">Borrar producto</button>
+          </div>
+        </form>
+
+
+      </div>
+
 
       @endforeach
 
