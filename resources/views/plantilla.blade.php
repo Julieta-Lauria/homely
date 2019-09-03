@@ -95,7 +95,7 @@
       </form></li> <!--@@ a modo de prueba, despues se cambian por íconos -->
      <li id="menu_hamburguesa"><a href="#"><i class="fas fa-bars"></i></i></a></li>
      <li><a href="{{ url('/login') }}"><i class="fas fa-sign-in-alt"></i></a></li>
-     <li><a href="{{ url('/cart') }}"><i class="fas fa-shopping-cart"></i></a></li>
+     @auth<li><a href="{{ url('/cart') }}"><i class="fas fa-shopping-cart"></i></a></li>@endauth
     </ul>
    </nav>
    </div>

@@ -14,7 +14,7 @@
   <div class="products-container">
     <ul class="container-vista">
 
-      @foreach ($carrito as $producto)
+      @forelse ($carrito as $producto)
 
       <li >
           <div class="vista-producto">
@@ -38,9 +38,11 @@
 
 
       </div>
+      @empty
 
+    <p>  No tiene productos en el carrrito..</p>
 
-      @endforeach
+      @endforelse
 
     </ul>
 
