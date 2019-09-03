@@ -57,6 +57,21 @@
   </div>
 
 
+  <div class="edit-delete-product">
+
+    <form action="#" method="post">
+      @csrf
+      <!-- Decimos que aunque en el formulario tengamos metodo post, vamos a usar delete: -->
+
+      <div class="delete-button">
+        <button type="submit" name="send">Finalizar compra</button>
+      </div>
+    </form>
+
+
+  </div>
+
+
 @endsection
 
 
